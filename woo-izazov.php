@@ -2,8 +2,8 @@
 // ovo je najednostavnije rešenje koje bih primenila jer u jednostavnosti je vrlina :)
 // copy to functions.php
 
-add_action( 'woocommerce_before_shop_loop', 'action_woocommerce_before_shop_loop', 10 );
-function action_woocommerce_before_shop_loop(  ) {
+add_action( 'woocommerce_before_shop_loop', 'dg2_woocommerce_before_shop_loop', 10 );
+function dg2_woocommerce_before_shop_loop(  ) {
 	?>
 <div style="display:block;width:100%; padding:0 25px; ">
 	<h2>Do it in Black</h2>
@@ -36,8 +36,8 @@ wp_reset_postdata();
 // mada ne vidim razlog sto ovo ne bi uradili direkt u wp promenom naslova, bez promene slug-a
 // takodje ovo moze da zavisi i od teme , u jednoj od tema ovo nije radilo, nisam dublje istrazivala
 // ali kontam da je tema pregazila ovaj hook sa svojim hookom jer ima i specifican prikaz ovih strana 
-add_filter( 'woocommerce_page_title', 'custom_woocommerce_page_title');
-function custom_woocommerce_page_title( $page_title ) {
+add_filter( 'woocommerce_page_title', 'dg2_woocommerce_page_title');
+function dg2_woocommerce_page_title( $page_title ) {
   if( $page_title == 'Shop' ) {
     return "Lada Butique";
   }
