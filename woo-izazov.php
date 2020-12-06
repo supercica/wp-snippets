@@ -1,4 +1,7 @@
 <?php
+// ovo je najednostavnije rešenje koje bih primenila jer u jednostavnosti je vrlina :)
+// copy to functions.php
+
 add_action( 'woocommerce_before_shop_loop', 'action_woocommerce_before_shop_loop', 10 );
 function action_woocommerce_before_shop_loop(  ) {
 	?>
