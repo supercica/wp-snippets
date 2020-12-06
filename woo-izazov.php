@@ -9,7 +9,7 @@ function action_woocommerce_before_shop_loop(  ) {
 <?php
 $args = array(
     'post_type' => 'product_variation',
-    'posts_per_page' => 6,
+    'posts_per_page' => 6, // hocu samo 6 proizvoda
 		'meta_query' => array(
         array(
             'key'     => 'attribute_pa_color',
