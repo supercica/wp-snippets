@@ -1,6 +1,12 @@
 <?php
 // ovo je najednostavnije rešenje koje bih primenila jer u jednostavnosti je vrlina :)
 // copy to functions.php
+/*
+ako bi trebala da napravim malo pristojnije resenje onda bi izabrala da napravim plugin 
+koji bi imao svoju options page gde bi korisnik mogao da izabere da li želi ili ne želi nešto ovako
+u svojoj prodavnici i pri tom bi imao mogućnost da izabere boju ili boje i unese novi naslov 
+*/
+
 
 add_action( 'woocommerce_before_shop_loop', 'dg2_woocommerce_before_shop_loop', 10 );
 function dg2_woocommerce_before_shop_loop(  ) {
