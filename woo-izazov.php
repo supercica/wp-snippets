@@ -22,7 +22,7 @@ $args = array(
 		'meta_query' => array(
         array(
             'key'     => 'attribute_pa_color',
-            'value'   => array('crna'), // ostavljam array u slucaju da se klijent predomisli pa doda jos neku boju
+            'value'   => array('black'), // ostavljam array u slucaju da se klijent predomisli pa doda jos neku boju
             'compare' => 'IN',
         ),
     ),
