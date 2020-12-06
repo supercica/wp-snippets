@@ -1,14 +1,15 @@
+<?php
 add_action( 'woocommerce_before_shop_loop', 'action_woocommerce_before_shop_loop', 10 );
 function action_woocommerce_before_shop_loop(  ) {
 	?>
-	<div style="display:block;width:100%; padding:0 25px; ">
-		<h2>Do it in Black</h2>
-	</div>
-<ul class="products product-style-3 row grid-view products-wrap grid-columns-4  ">
+<div style="display:block;width:100%; padding:0 25px; ">
+	<h2>Do it in Black</h2>
+</div>
+<ul class="products">
 <?php
 $args = array(
     'post_type' => 'product_variation',
-    'posts_per_page' => 12,
+    'posts_per_page' => 6,
 		'meta_query' => array(
         array(
             'key'     => 'attribute_pa_color',
@@ -17,9 +18,9 @@ $args = array(
         ),
     ),
     );
-$loop = new WP_Query( $args );
-if ( $loop->have_posts() ) {
-    while ( $loop->have_posts() ) : $loop->the_post();
+$v_products = new WP_Query( $args );
+if ( $v_products->have_posts() ) {
+    while ( $v_products->have_posts() ) : $v_products->the_post();
         wc_get_template_part( 'content', 'product' );
     endwhile;
 } else {
