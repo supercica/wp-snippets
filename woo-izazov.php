@@ -11,9 +11,9 @@ u svojoj prodavnici i pri tom bi imao mogućnost da izabere boju ili boje i unes
 add_action( 'woocommerce_before_shop_loop', 'dg2_woocommerce_before_shop_loop', 10 );
 function dg2_woocommerce_before_shop_loop(  ) {
 	?>
-<div style="display:block;width:100%; padding:0 25px; ">
-	<h2>Do it in Black</h2>
-</div>
+<header class="woocommerce-products-header">
+	<h2 class="woocommerce-products-header__title page-title">Do it in Black</h2>
+</header>
 <ul class="products">
 <?php
 $args = array(
